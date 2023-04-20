@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vuejs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+         <h2>Rajib Arya Putra</h2>
+
+         <P>Panel Administrator</P>
+         <div class="card">
+            <div class="card-group">
+                <label>Judul Halaman</label>
+                <input type="text">
+    </div>
+    
+    <div class="card-group">
+        <label><input type="checkbox">Daftar Kelas</label>
+        <label><input type="checkbox">Kelas Baru</label>
+        <label><input type="checkbox">Progres Kelas</label>
+    </div>
+    
+    <div class="card">
+        <label for="Progres">Progres Kelas: (50%)</label>
+        <progress id="progress0" max="100" value="50"></progress>
+    </div>
+
+    <div card>
+        <form>
+            <label for="">Kelas</label>
+            <input type="text" placeholder="Kelas Baru">
+            <button><Add</button>
+        </form>
+    </div>
+
+    <h3 class="title">Daftar Kelas(<small>{{kelas.length}}</small>)</h3>
+
+    <ul>
+        <li class="items" v-for="k in kelas">
+            <label v-bind:class="{active:k.active}">
+                <input type="checkbox"v-model="k.active">{{k.nama}}</label>
+            <a href="#" class="btn-danger">delete</a>
+        </li>
+    </ul>
+</div>
+</div>
+   <script> src="<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14"></script>"</script>
+   <script>
+     new vue({
+        el:'#app'
+        data:{
+            kelas:[
+                {nama;'HTML',active:true}
+                {nama;'Javascript',active:false}
+                {nama;'Python',active:false}
+                {nama;'Golang',active:true}
+                {nama;'C#',active:true}
+            ]
+        }
+     })
+   </script> 
+</body>
+</html>
